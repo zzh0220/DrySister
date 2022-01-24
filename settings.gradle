@@ -10,3 +10,5 @@ rootProject.name = "DrySister"
 include ':app'
 include ':common'
 include ':launcher'
+include ':login'
+include ':pay'

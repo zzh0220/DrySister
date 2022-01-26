@@ -11,6 +11,7 @@ import android.view.animation.Animation;
 
 import androidx.annotation.Nullable;
 
+import com.alibaba.android.arouter.BuildConfig;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.common.constant.ConstantNumber;
 import com.example.common.constant.ConstantString;
@@ -22,7 +23,6 @@ import com.example.drysister.databinding.ActivitySplashBinding;
 
 public class SplashActivity extends Activity {
     private static final String TAG = SplashActivity.class.getSimpleName();
-    private String mTAG;
     private ActivitySplashBinding mSplashBinding;
 
     @Override
@@ -33,7 +33,6 @@ public class SplashActivity extends Activity {
             ARouter.openDebug();
         }
         ARouter.init(getApplication());
-        mTAG = "====ZZH====" + TAG;
         mSplashBinding = ActivitySplashBinding.inflate(getLayoutInflater());
         setContentView(mSplashBinding.getRoot());
 

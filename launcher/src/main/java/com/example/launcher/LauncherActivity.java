@@ -1,13 +1,15 @@
 package com.example.launcher;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-import com.example.common.livedatabus.LiveDataBus;
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.example.common.constant.ConstantString;
 
-import org.greenrobot.eventbus.EventBus;
-
+/**
+ * Launcher模块负责初始化应用
+ * */
+@Route(path = ConstantString.ROUTER_PATH_LAUNCHER)
 public class LauncherActivity extends AppCompatActivity {
 
     @Override

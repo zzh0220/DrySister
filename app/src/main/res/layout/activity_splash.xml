@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="splash activity"
+        android:text="@string/dong_ge_is_most_beautiful"
         android:textSize="50dp"
         android:textColor="@color/teal_200"
         />

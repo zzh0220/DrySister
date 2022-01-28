@@ -5,6 +5,8 @@ public class ConstantNumber {
     public static int TIME_MS_10 = 10;
     public static int TIME_MS_100 = 100;
     public static int TIME_MS_1000 = 1000;
+    public static int TIME_MS_5000 = 5000;
+    public static int TIME_S_5 = 5;
 
     // count
     public static int COUNT_10 = 10;

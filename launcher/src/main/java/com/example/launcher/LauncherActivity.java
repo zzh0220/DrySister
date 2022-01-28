@@ -11,7 +11,6 @@ import com.example.common.constant.ConstantString;
  * */
 @Route(path = ConstantString.ROUTER_PATH_LAUNCHER)
 public class LauncherActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

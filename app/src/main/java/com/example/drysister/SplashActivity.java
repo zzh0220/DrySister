@@ -37,7 +37,7 @@ public class SplashActivity extends Activity {
         setContentView(mSplashBinding.getRoot());
 
         AlphaAnimation alphaAnimation = new AlphaAnimation(ConstantNumber.FLOAT_0_DOT_1, ConstantNumber.FLOAT_0_DOT_1);
-        alphaAnimation.setDuration(ConstantNumber.TIME_MS_1000); //设置动画播放时长1000毫秒（1秒）
+        alphaAnimation.setDuration(ConstantNumber.TIME_MS_5000); //设置动画播放时长1000毫秒（1秒）
         mSplashBinding.getRoot().startAnimation(alphaAnimation);
         //设置动画监听
         alphaAnimation.setAnimationListener(new Animation.AnimationListener() {

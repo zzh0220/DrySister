@@ -4,11 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class PayActivity extends AppCompatActivity {
+import com.example.pay.databinding.ActivityPayBinding;
 
+/**
+ * 支付入口
+ * */
+public class PayActivity extends AppCompatActivity {
+    private static final String TAG = PayActivity.class.getSimpleName();
+    private ActivityPayBinding mActivityPayBinding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pay);
+        mActivityPayBinding = ActivityPayBinding.inflate(getLayoutInflater());
+        setContentView(mActivityPayBinding.getRoot());
     }
 }

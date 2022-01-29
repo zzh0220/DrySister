@@ -21,4 +21,10 @@ public class ConstantString {
     // database
     public static final String DA_LITE_NAME = "user_account";
     public static final String DA_LITE_TABLE_NAME = "account_and_pwd";
+
+    // broadcast
+
+    // sharedPreference
+
+    // service name
 }

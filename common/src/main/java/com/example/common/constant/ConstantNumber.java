@@ -31,4 +31,7 @@ public class ConstantNumber {
     public static int PROGRESS_80 = 80;
     public static int PROGRESS_90 = 90;
     public static int PROGRESS_100 = 100;
+
+    // version code
+    public static int VERSION_CODE_DATABASE_V1 = 1;
 }

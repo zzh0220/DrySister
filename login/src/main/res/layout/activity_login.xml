@@ -67,7 +67,7 @@
 
         <EditText
             android:id="@+id/et_activity_login_pwd"
-            android:text="@string/input_account"
+            android:text="@string/input_pwd"
             android:textSize="@dimen/margin_size_20"
             android:textStyle="bold"
             android:layout_width="@dimen/view_size_200"

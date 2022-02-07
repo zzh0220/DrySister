@@ -19,10 +19,33 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildTypes {
+    signingConfigs {
+        debug {
+            storeFile file('keystore/drysister_keystore')
+            storePassword 'android'
+            keyAlias 'donggeno1'
+            keyPassword 'android'
+        }
+
         release {
+            storeFile file('keystore/drysister_keystore')
+            storePassword 'android'
+            keyAlias 'donggeno1'
+            keyPassword 'android'
+        }
+    }
+
+    buildTypes {
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {

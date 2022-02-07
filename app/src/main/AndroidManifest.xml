@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.drysister">
-
+    <uses-permission android:name="com.drysister.permission.BROADCAST"/>
+    <permission
+        android:name="com.drysister.permission.BROADCAST"
+        android:protectionLevel="signature">
+    </permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"

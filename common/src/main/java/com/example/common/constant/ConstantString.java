@@ -12,7 +12,7 @@ public class ConstantString {
     public static final String ACTION_LAUNCH_ACTIVITY_PRODUCT = "android.intent.action.ProductActivity";
     public static final String ACTION_LAUNCH_ACTIVITY_PAY = "android.intent.action.PayActivity";
 
-    // router path
+    // router
     public static final String ROUTER_PATH_LAUNCHER = "/launcher/launcherActivity";
     public static final String ROUTER_PATH_LOGIN = "/login/loginActivity";
     public static final String ROUTER_PATH_PRODUCT = "/product/productActivity";
@@ -22,9 +22,11 @@ public class ConstantString {
     public static final String DA_LITE_NAME = "user_account";
     public static final String DA_LITE_TABLE_NAME = "account_and_pwd";
 
-    // broadcast
-
     // sharedPreference
 
-    // service name
+    // service
+
+    // broadcast
+    public static final String BROADCAST_PERMISSION_INTERNAL = "com.drysister.permission.BROADCAST";
+    public static final String BROADCAST_ACTION_INTERNAL = "com.drysister.permission.action_broadcast";
 }

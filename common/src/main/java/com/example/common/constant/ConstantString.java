@@ -29,4 +29,8 @@ public class ConstantString {
     // broadcast
     public static final String BROADCAST_PERMISSION_INTERNAL = "com.drysister.permission.BROADCAST";
     public static final String BROADCAST_ACTION_INTERNAL = "com.drysister.permission.action_broadcast";
+
+    // live data bus
+    public static final String LIVE_DATA_BUS_ELEMENT_NAME = "android.arch.lifecycle.LiveData";
+    public static final String LIVE_DATA_BUS_ELEMENT_METHOD = "observeForever";
 }

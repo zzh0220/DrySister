@@ -2,10 +2,13 @@ package com.example.common.livedatabus;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.PluralsRes;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
+
+import com.example.common.constant.ConstantString;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -16,6 +19,7 @@ import java.util.Map;
  * 用于app内模块间发送消息
  * */
 public class LiveDataBus {
+    private static final String TAG = LiveDataBus.class.getSimpleName();
     private final Map<String, BusMutableLiveData<Object>> bus;
 
     private LiveDataBus() {
@@ -63,8 +67,8 @@ public class LiveDataBus {
             StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
             if (stackTrace != null && stackTrace.length > 0) {
                 for (StackTraceElement element : stackTrace) {
-                    if ("android.arch.lifecycle.LiveData".equals(element.getClassName()) &&
-                            "observeForever".equals(element.getMethodName())) {
+                    if (ConstantString.LIVE_DATA_BUS_ELEMENT_NAME.equals(element.getClassName()) &&
+                            ConstantString.LIVE_DATA_BUS_ELEMENT_METHOD.equals(element.getMethodName())) {
                         return true;
                     }
                 }

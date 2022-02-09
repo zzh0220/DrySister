@@ -1,11 +1,6 @@
 package com.example.drysister;
 
-import android.app.Activity;
-import android.app.Application;
-import android.content.ComponentName;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 
@@ -13,6 +8,7 @@ import androidx.annotation.Nullable;
 
 import com.alibaba.android.arouter.BuildConfig;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.example.common.activity.BaseActivity;
 import com.example.common.constant.ConstantNumber;
 import com.example.common.constant.ConstantString;
 import com.example.drysister.databinding.ActivitySplashBinding;
@@ -21,7 +17,7 @@ import com.example.drysister.databinding.ActivitySplashBinding;
  * 应用入口，展示应用进入界面，并且作为广告页
  */
 
-public class SplashActivity extends Activity {
+public class SplashActivity extends BaseActivity {
     private static final String TAG = SplashActivity.class.getSimpleName();
     private ActivitySplashBinding mSplashBinding;
 

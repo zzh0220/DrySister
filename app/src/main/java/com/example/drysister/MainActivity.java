@@ -1,11 +1,11 @@
 package com.example.drysister;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.common.activity.BaseActivity;
 import com.example.common.context.ContextManager;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {

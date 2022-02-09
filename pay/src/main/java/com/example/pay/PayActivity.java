@@ -1,10 +1,9 @@
 package com.example.pay;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.example.common.activity.BaseActivity;
 import com.example.common.constant.ConstantString;
 import com.example.pay.databinding.ActivityPayBinding;
 
@@ -12,7 +11,7 @@ import com.example.pay.databinding.ActivityPayBinding;
  * 支付入口
  * */
 @Route(path = ConstantString.ROUTER_PATH_PAY)
-public class PayActivity extends AppCompatActivity {
+public class PayActivity extends BaseActivity {
     private static final String TAG = PayActivity.class.getSimpleName();
     private ActivityPayBinding mActivityPayBinding;
     @Override

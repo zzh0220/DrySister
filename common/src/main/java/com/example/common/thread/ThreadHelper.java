@@ -18,5 +18,11 @@ public class ThreadHelper {
         return mInstance;
     }
 
+    public void createThreadPool() {
 
+    }
+
+    public void destroyThread() {
+
+    }
 }

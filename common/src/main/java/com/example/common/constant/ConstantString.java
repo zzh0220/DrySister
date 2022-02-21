@@ -17,6 +17,7 @@ public class ConstantString {
     public static final String ROUTER_PATH_LOGIN = "/login/loginActivity";
     public static final String ROUTER_PATH_PRODUCT = "/product/productActivity";
     public static final String ROUTER_PATH_PAY = "/pay/payActivity";
+    public static final String ROUTER_PATH_Media = "/media/MediaActivity";
 
     // database
     public static final String DA_LITE_NAME = "user_account";

@@ -60,7 +60,6 @@ android {
 
 dependencies {
     implementation 'com.alibaba:arouter-api:1.5.2'
-    annotationProcessor 'com.alibaba:arouter-compiler:1.5.2'
     implementation project(":common")
     implementation project(":launcher")
     implementation project(":login")

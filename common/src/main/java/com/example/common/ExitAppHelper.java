@@ -1,6 +1,8 @@
 package com.example.common;
 
 import com.example.common.broadcast.BroadcastHelper;
+import com.example.common.thread.ThreadManager;
+import com.example.common.thread.ThreadPool;
 
 /**
  * 用于在退出应用的时候释放所有资源
@@ -47,6 +49,9 @@ public class ExitAppHelper {
      * 停止所有线程
      * */
     public void stopThread() {
+        // 关闭线程池
+        ThreadPool.getInstance().shutDownThreadPool();
+        ThreadManager.getInstance().clearAllResources();
     }
 
     /**

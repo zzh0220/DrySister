@@ -1,6 +1,7 @@
 package com.example.pay.computer;
 
 import com.example.common.moduleInterface.IProductModuleApi;
+import com.example.common.moduleInterface.RegisterInterface;
 
 /**
  * @Author zhaozenghao
@@ -9,7 +10,7 @@ import com.example.common.moduleInterface.IProductModuleApi;
  */
 public class ComputerBaseMoney {
     private static final String TAG = ComputerBaseMoney.class.getSimpleName();
-    private IProductModuleApi IProductInterface;
+    private IProductModuleApi IProductInterface = new RegisterInterface().getIProductModuleApi();
 
     public double computerBaseMoney(String productId) {
         return inquireProductOriginPrice(productId);

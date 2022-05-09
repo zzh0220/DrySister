@@ -11,6 +11,10 @@ public class ProductItem {
     private final Lock mReadLock = mRwLock.readLock();
     private final Lock mWriteLock = mRwLock.writeLock();
 
+    // 商品的ID
+    private String mProductId;
+    // 商品的类别
+    private String mProductCategory;
     // 商品名称
     private String mProductName;
     // 原价
@@ -22,6 +26,24 @@ public class ProductItem {
     // 库存
     private int mCount;
 
+    public String getProductId() {
+        return mProductId;
+    }
+
+    public ProductItem setProductId(String productId) {
+        this.mProductId = productId;
+        return this;
+    }
+
+    public String getCategory() {
+        return mProductCategory;
+    }
+
+    public ProductItem setCategory(String productCategory) {
+        this.mProductCategory = productCategory;
+        return this;
+    }
+
     public int getCount() {
         mReadLock.lock();
         try {
@@ -31,44 +53,49 @@ public class ProductItem {
         }
     }
 
-    public void setCount(int count) {
+    public ProductItem setCount(int count) {
         mWriteLock.lock();
         try {
             this.mCount = count;
         } finally {
             mWriteLock.unlock();
         }
+        return this;
     }
 
     public String getProductName() {
         return mProductName;
     }
 
-    public void setProductName(String productName) {
+    public ProductItem setProductName(String productName) {
         this.mProductName = productName;
+        return this;
     }
 
     public double getProductPriceOrigin() {
         return mProductPriceOrigin;
     }
 
-    public void setProductPriceOrigin(double productPriceOrigin) {
+    public ProductItem setProductPriceOrigin(double productPriceOrigin) {
         this.mProductPriceOrigin = productPriceOrigin;
+        return this;
     }
 
     public double getProductPriceCurrent() {
         return mProductPriceCurrent;
     }
 
-    public void setProductPriceCurrent(double productPriceCurrent) {
+    public ProductItem setProductPriceCurrent(double productPriceCurrent) {
         this.mProductPriceCurrent = productPriceCurrent;
+        return this;
     }
 
     public String getProductDescribe() {
         return mProductDescribe;
     }
 
-    public void setProductDescribe(String productDescribe) {
+    public ProductItem setProductDescribe(String productDescribe) {
         this.mProductDescribe = productDescribe;
+        return this;
     }
 }

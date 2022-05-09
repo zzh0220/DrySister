@@ -1,6 +1,9 @@
 package com.example.common.service;
 
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.ServiceConnection;
+import android.os.IBinder;
 
 import com.example.common.context.ContextManager;
 
@@ -35,4 +38,23 @@ public class ServiceManager {
      * */
     public void stopService(String serviceName, Intent serviceIntent) {
     }
+
+    /**
+     * bind service
+     */
+    private void testBindService() {
+
+    }
+
+    ServiceConnection serviceConnection = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
+
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName componentName) {
+
+        }
+    };
 }

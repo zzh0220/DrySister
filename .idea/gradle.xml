@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/media" />
             <option value="$PROJECT_DIR$/pay" />
             <option value="$PROJECT_DIR$/product" />
+            <option value="$PROJECT_DIR$/test" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

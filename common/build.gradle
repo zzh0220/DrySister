@@ -6,6 +6,11 @@ android {
     compileSdk 31
 
     defaultConfig {
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
 
     buildTypes {
@@ -21,6 +26,7 @@ android {
 }
 
 dependencies {
+    implementation 'com.alibaba:arouter-api:1.5.2'
     implementation 'org.greenrobot:eventbus:3.1.1'
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'

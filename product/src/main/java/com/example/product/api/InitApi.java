@@ -13,16 +13,11 @@ public class InitApi {
     private RegisterInterface mRegisterInterface = new RegisterInterface();
 
     public InitApi() {
-        mRegisterInterface.setIProductModuleApi(getApi());
-    }
-
-    private IProductModuleApi getApi() {
-        IProductModuleApi mApi = new IProductModuleApi() {
+        mRegisterInterface.setProductModuleApi(new IProductModuleApi() {
             @Override
             public double inquireProductOriginPrice(String productId) {
                 return ProductItemManager.getInstance().getProductInfo(productId).getProductPriceOrigin();
             }
-        };
-        return mApi;
+        });
     }
 }

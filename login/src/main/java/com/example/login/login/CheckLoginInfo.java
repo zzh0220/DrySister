@@ -9,7 +9,15 @@ public class CheckLoginInfo {
     private static final String TAG = CheckLoginInfo.class.getSimpleName();
     private UserAccountInfo mUserAccountInfo;
 
+    public CheckLoginInfo() {
+
+    }
+
     public CheckLoginInfo(UserAccountInfo userAccountInfo) {
         this.mUserAccountInfo = userAccountInfo;
+    }
+
+    public boolean isLogin(String userId, String userPhone) {
+        return false;
     }
 }

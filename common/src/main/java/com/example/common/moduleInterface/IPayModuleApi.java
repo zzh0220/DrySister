@@ -7,4 +7,5 @@ package com.example.common.moduleInterface;
  * @Description
  */
 public interface IPayModuleApi {
+    boolean isPaySuccess();
 }

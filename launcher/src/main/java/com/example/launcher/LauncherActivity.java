@@ -1,9 +1,12 @@
 package com.example.launcher;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.alibaba.android.arouter.facade.Postcard;
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.facade.service.DegradeService;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.common.activity.BaseActivity;
 import com.example.common.constant.ConstantString;
@@ -13,7 +16,7 @@ import com.example.launcher.databinding.ActivityLauncherBinding;
  * Launcher模块负责初始化应用
  * */
 @Route(path = ConstantString.ROUTER_PATH_LAUNCHER)
-public class LauncherActivity extends BaseActivity {
+public class LauncherActivity extends BaseActivity implements DegradeService {
     private static final String TAG = LauncherActivity.class.getSimpleName();
     private ActivityLauncherBinding mActivityLauncherBinding;
     @Override
@@ -42,5 +45,15 @@ public class LauncherActivity extends BaseActivity {
     private void enterLoginActivity() {
         Log.d(TAG, "EnterLoginActivity");
         ARouter.getInstance().build(ConstantString.ROUTER_PATH_LOGIN).navigation();
+    }
+
+    @Override
+    public void onLost(Context context, Postcard postcard) {
+        Log.d(TAG, "enter Login Activity fail " + postcard.getPath());
+    }
+
+    @Override
+    public void init(Context context) {
+
     }
 }

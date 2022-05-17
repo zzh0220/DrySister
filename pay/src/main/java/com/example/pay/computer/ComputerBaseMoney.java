@@ -10,7 +10,7 @@ import com.example.common.moduleInterface.RegisterInterface;
  */
 public class ComputerBaseMoney {
     private static final String TAG = ComputerBaseMoney.class.getSimpleName();
-    private IProductModuleApi IProductInterface = new RegisterInterface().getIProductModuleApi();
+    private IProductModuleApi IProductInterface = new RegisterInterface().getProductModuleApi();
 
     public double computerBaseMoney(String productId) {
         return inquireProductOriginPrice(productId);
